@@ -31,4 +31,19 @@ class puppetagent::config {
     changes => [ "set agent/splay ${puppetagent::agent_splay}", ],
   }
 
+  augeas {'agent_noop':
+    context => '/files/etc/puppetlabs/puppet/puppet.conf',
+    changes => [ "set agent/noop ${puppetagent::agent_noop}", ],
+  }
+
+  augeas {'agent_logdest':
+    context => '/files/etc/puppetlabs/puppet/puppet.conf',
+    changes => [ "set agent/logdest ${puppetagent::agent_logdest}", ],
+  }
+
+  augeas {'agent_log_level':
+    context => '/files/etc/puppetlabs/puppet/puppet.conf',
+    changes => [ "set agent/log_level ${puppetagent::agent_log_level}", ],
+  }
+
 }

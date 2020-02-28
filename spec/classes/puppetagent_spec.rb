@@ -38,6 +38,15 @@ describe 'puppetagent', :type => :class do
           it { is_expected.to contain_augeas('agent_splay').with({
             'context' => '/files/etc/puppetlabs/puppet/puppet.conf',
           })}
+          it { is_expected.to contain_augeas('agent_noop').with({
+            'context' => '/files/etc/puppetlabs/puppet/puppet.conf',
+          })}
+          it { is_expected.to contain_augeas('agent_log_level').with({
+            'context' => '/files/etc/puppetlabs/puppet/puppet.conf',
+          })}
+          it { is_expected.to contain_augeas('agent_logdest').with({
+            'context' => '/files/etc/puppetlabs/puppet/puppet.conf',
+          })}
         end
 
         describe 'puppetagent::service' do

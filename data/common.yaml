@@ -6,6 +6,9 @@ puppetagent::agent_environment: 'production'
 puppetagent::service_name: 'puppet'
 puppetagent::service_ensure: 'running'
 puppetagent::service_enable: true 
-puppetagent::agent_splay: false
-puppetagent::agent_splaylimit: 1800
 puppetagent::agent_runinterval: 1800
+puppetagent::agent_splay: false
+puppetagent::agent_noop: false
+puppetagent::agent_splaylimit: 1800
+puppetagent::agent_log_level: 'notice'
+puppetagent::agent_logdest: 'syslog'
