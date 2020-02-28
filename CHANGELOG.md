@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release 1.5.0
+
+**Features**
+
+- Add splay option
+- Add splaylimit option
+- Add noop option
+- Add log_level option
+- Add logdest option
+
 ## Release 1.4.0
 
 **Features**
