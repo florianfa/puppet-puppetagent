@@ -14,13 +14,11 @@
 
 ## Overview
 
-This module will manage puppet-agent 5.3 in your system.
+This module will manage the puppet-agent in your system.
 
-**If you are looking into puppet 4 please use an older version of this module.**
+Actually this is a very simple module.
 
-This is a very simple module, usually used for development and test purposes.
-
-Yes, you can use it in production, but it is a simple module, you may miss some parameters for production use.
+Yes, you can use it in production, but you may miss some parameters for production use.
 
 The main objective is to manage puppet-agent with minimal intervention in the default files.
 
@@ -30,8 +28,8 @@ Augeas resource type is used to change parameters inside the puppet.conf.
 
 This module was tested under these platforms
 
-- RedHat 5, 6 and 7
-- CentOS 5, 6 and 7
+- RedHat 5, 6 and 7, 8
+- CentOS 5, 6 and 7, 8
 - Scientific 6 and 7
 - Debian 7, 8 and 9
 - Ubuntu 14.04 and 16.04
@@ -364,4 +362,5 @@ This matrix needs vagrant (>=2.0) and virtualbox (>=5.1) to work properly, make 
 
 ### Author/Contributors
 
-Guto Carvalho (gutocarvalho at gmail dot com)
+    Guto Carvalho (gutocarvalho at gmail dot com)
+    Florian Faltermeier, University of Innsbruck (florian dot faltermeier @ uibk dot ac dot at)
