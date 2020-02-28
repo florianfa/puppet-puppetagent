@@ -218,13 +218,51 @@ Type: Integer
 
 Set how often puppet agent applies the catalog in seconds.
 
+#### `agent_splay`
+
+Type: Boolean
+
+Whether to sleep for a random amount of time
+
+#### `agent_splaylimit`
+
+Type: Integer
+
+Set maximum time to delay before an agents first run.
+
+#### `agent_noop`
+
+Type: Boolean
+
+Whether to apply catalogs in noop mode
+
+#### `agent_log_level`
+
+Type: String
+
+Default logging level for messages from Puppet
+
+#### `agent_logdest`
+
+Type: String
+
+Where to send log messages. (e.g. syslog, absolut path to a logfile)
+
 ### Hiera Keys Sample
 
 ```
 puppetagent::agent_certname: "%{trusted.certname}"
-puppetagent::agent_version: '5.3.3-1.el7'
+puppetagent::agent_version: 'installed'
 puppetagent::agent_server: 'puppetserver.hacklab'
 puppetagent::agent_environment: 'production'
+puppetagent::service_name: 'puppet'
+puppetagent::service_ensure: 'running'
+puppetagent::service_enable: true
+puppetagent::agent_splay: false
+puppetagent::agent_noop: false
+puppetagent::agent_splaylimit: 1800
+puppetagent::agent_log_level: 'notice'
+puppetagent::agent_logdest: 'syslog'
 puppetagent::agent_runinterval: 3600
 ```
 
